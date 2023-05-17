@@ -1,0 +1,55 @@
+section {
+  width: 75%;
+  margin: 0 auto;
+}
+
+section h3 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: Helvetica;
+  background-color: blue;
+  padding: 10px;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.contador {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.align {
+  font-weight: 600;
+  font-size: 50px;
+  width:auto;
+  height: 100px;
+}
+
+button {
+  background-color: yellow;
+  cursor: pointer;
+}
+
+button:hover, button:focus {
+  background-color: #000000;
+  color: #ffffff;
+
+}
+
+p {
+  background-color: #ffffff;
+  text-align: center;
+}
+
+p:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-top: 10%;
+}
+

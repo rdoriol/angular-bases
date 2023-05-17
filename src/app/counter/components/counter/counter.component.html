@@ -1,0 +1,17 @@
+<h1>{{ title }}</h1>
+<hr>
+<h3>Counter: {{ counter }}</h3>
+
+<hr>
+
+<section>
+  <h3>Incrementar Contador</h3>
+
+  <div class="contador">
+    <p id="numero" class="align">{{ counter }}</p>
+    <button id="decrementar" class="align" (click)="increaseBy(-1);" >-</button>
+    <button class="align" (click)="reset();" >Reset</button>
+    <button id="incrementar" class="align" (click)="increaseBy(1);">+</button>
+
+  </div>
+</section>
