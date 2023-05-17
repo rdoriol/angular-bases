@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page.component.css']
 })
 export class MainPageComponent {
-  public titleMain: string = 'DBZ Main Page';
+  public titleMain: string = 'DBZ Personajes';
 }
