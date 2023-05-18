@@ -1,16 +1,17 @@
 <h4>Agregar personajes</h4>
-<form class="row">
+<form class="row" (ngSubmit)="mostrarCharacters()">
                     <!-- mismo efecto añadiendo como atriburo [value]="character.name"  que value="{{ character.name }}"-->
   <input type="text" class="form-control mb-2"  placeholder="Nombre"
     [(ngModel)]="character.name"
-    name="name">
+    name="name"
+    >
 
   <input type="number" class="form-control mb-2"  placeholder="Poder"
     [(ngModel)]="character.power"
-    name="power">
+    name="power"
+    >
 
-  <button type="submit" class="btn btn-primary"
-  (click)="mostrarCharacters()">
+  <button type="submit" class="btn btn-primary">
     Agregar
   </button>
 
@@ -19,7 +20,8 @@
   </button>
 
 </form>
-            <!-- Distintas formas de imrpimir los input -->
+            <!-- Distintas formas de imrpimir los input
             <pre>{{ character.name }}</pre>
             <pre>{{ character.power }}</pre>
             <pre>{{ character | json }}</pre>
+            -->

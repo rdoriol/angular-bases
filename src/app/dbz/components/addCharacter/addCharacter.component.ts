@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Character } from '../../interfaces/character.interface';
 
 
@@ -8,23 +8,38 @@ import { Character } from '../../interfaces/character.interface';
   styleUrls: ['./addCharacter.component.css']
 })
 export class AddCharacterComponent {
+
+                  // @Output(). Pasos:
+      //1º  // Para comunicar con el padre se utilizará @Output(). Para ello desde donde
+      // queremos emitir se instancia objeto de tipo/evento "EventEmitter" (que es un evento)
+  @Output()
+  public onNewCharacter: EventEmitter<Character> = new EventEmitter();
+
+
+      // objeto character donde se recibirán los inputs del formulario
   public character: Character = {
     name: "",
     power: 0
   }
 
-  public charactersPersons: Character[] = []
-
-public inputCharacter: Character = {
-  name: "Robertaco", // se capturará el input name del form
-  power: 500  // se capurará el input power del form
-}
-
-
- inputCharactars = this.charactersPersons.push(this.inputCharacter);
-
+  // método de prueba
  mostrarCharacters(): void {
-  console.log(this.character);
+    if(this.character.name.length === 0) return;
+
+          // La expresión anterior es igual a la comentada a continuación:
+                  /* if(this.character.name.length == 0) {
+                        return;
+                      }*/
+
+     //2º // Se utiliza objeto instanciado EventEmitter para 'emitir/enviar' objeto character
+  this.onNewCharacter.emit(this.character);
+
+  //this.character.name = "";
+  //this.character.power = 0;
  }
+
+
+
+
 
 }

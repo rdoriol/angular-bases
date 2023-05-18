@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 import { Character } from '../interfaces/character.interface';
 
 @Component({
@@ -23,6 +23,14 @@ export class MainPageComponent {
       power: 7500
     }
   ];
+
+     //3º Output() // Siguiendo con pasos para recibir datos de un hijo con @OutPut. Se crea método
+    @Input()
+    public onNewCharacterPadre( characterArg: Character){
+      console.log(characterArg);
+
+      this.character.push(characterArg);
+    }
 }
 
 

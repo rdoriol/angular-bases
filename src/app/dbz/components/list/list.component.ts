@@ -11,6 +11,13 @@ export class ListComponent {
 
   @Input()
   public characterInput: Character[] = [
+    {
+      name: "pepe",
+      power: 123
+    }
 
   ]
+          // Eliminar personaje del listado
+
+
 }
