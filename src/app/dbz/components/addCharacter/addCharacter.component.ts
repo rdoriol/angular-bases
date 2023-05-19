@@ -23,23 +23,17 @@ export class AddCharacterComponent {
   }
 
   // método de prueba
- mostrarCharacters(): void {
-    if(this.character.name.length === 0) return;
+ characterSave(): void {
 
-          // La expresión anterior es igual a la comentada a continuación:
-                  /* if(this.character.name.length == 0) {
-                        return;
-                      }*/
+  if(this.character.name.length === 0) return;  // Mismo resultado que una expresión if convencional
 
-     //2º // Se utiliza objeto instanciado EventEmitter para 'emitir/enviar' objeto character
+     //2º Output // Se utiliza objeto instanciado EventEmitter para 'emitir/enviar' objeto character
   this.onNewCharacter.emit(this.character);
 
-  //this.character.name = "";
-  //this.character.power = 0;
+  this.character = {
+    name: '',
+    power: 0
+  }
  }
-
-
-
-
 
 }

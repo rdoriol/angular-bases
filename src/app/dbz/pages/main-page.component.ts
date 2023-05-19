@@ -9,6 +9,7 @@ import { Character } from '../interfaces/character.interface';
 export class MainPageComponent {
   public titleMain: string = 'DBZ Personajes';
 
+
   public character: Character[] = [
     {
       name: 'Krilin',
@@ -25,10 +26,8 @@ export class MainPageComponent {
   ];
 
      //3º Output() // Siguiendo con pasos para recibir datos de un hijo con @OutPut. Se crea método
-    @Input()
-    public onNewCharacterPadre( characterArg: Character){
-      console.log(characterArg);
 
+    public onNewCharacterPadre( characterArg: Character): void {
       this.character.push(characterArg);
     }
 }

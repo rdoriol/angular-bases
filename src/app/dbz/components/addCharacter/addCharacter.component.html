@@ -1,5 +1,5 @@
 <h4>Agregar personajes</h4>
-<form class="row" (ngSubmit)="mostrarCharacters()">
+<form class="row" (ngSubmit)="characterSave()">
                     <!-- mismo efecto añadiendo como atriburo [value]="character.name"  que value="{{ character.name }}"-->
   <input type="text" class="form-control mb-2"  placeholder="Nombre"
     [(ngModel)]="character.name"
